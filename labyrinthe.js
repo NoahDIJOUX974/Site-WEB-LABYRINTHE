@@ -33,19 +33,19 @@
                     if (laby[i][j]==m)
                     {
                     insertion+="<td>";
-                    insertion+="<img width='52'height='52' src='Assets/stonewall.png'>";
+                    insertion+="<img width='52'height='52' src='PHOTO LABYRINTHE/stonewall.png'>";
                     insertion+="</td>";
                     }
                     if (laby[i][j]==p)
                     {
                     insertion+="<td>";
-                    insertion+="<img width='52' height='52' style='background-image:Assets/Ground.png' src='Assets/Heros.png'>";
+                    insertion+="<img width='52' height='52' style='background-image:PHOTO LABYRINTHE/Ground.png' src='PHOTO LABYRINTHE/Heros.png'>";
                     insertion+="</td>";
                     }
                     if (laby[i][j]==b)
                     {
                     insertion+="<td>";
-                    insertion+="<img width='52' height='52' src='Assets/Ground.png'>";
+                    insertion+="<img width='52' height='52' src='PHOTO LABYRINTHE/Ground.png'>";
                     insertion+="</td>";
                     }
 
@@ -53,7 +53,7 @@
                     if (laby[i][j]==f)
                     {
                     insertion+="<td>";
-                    insertion+="<img width='52' height='52'src='Assets/Trophy.png'>";
+                    insertion+="<img width='52' height='52'src='PHOTO LABYRINTHE/Trophy.png'>";
                     insertion+="</td>";
                     }
                      
