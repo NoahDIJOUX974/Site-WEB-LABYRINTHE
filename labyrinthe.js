@@ -9,14 +9,14 @@
         //tableau à double entrée représentant votre labyrinthe, vous pouvez le modifier pour comprendre le fonctionnement
         var laby = [[m,m,m,m,m,m,m,m,m,m],
                     [m,p,m,b,b,b,b,b,b,m],
-                    [m,b,m,b,m,m,m,b,m,m],
+                    [m,b,m,b,m,b,m,m,b,m],
                     [m,b,m,b,m,b,m,b,b,m],
-                    [m,b,b,b,m,b,m,m,b,m],
-                    [m,b,m,b,m,b,b,b,b,f],
-                    [m,m,m,m,m,m,m,m,m,m]];
+                    [m,b,b,b,m,m,m,m,b,m],
+                    [m,b,m,b,m,m,m,m,b,f],
+                    [m,m,m,b,b,b,b,m,m,m]];
      
                   
-      
+    
          
         function afficheLaby() //ne rien modifier dans cette fonction
         {
@@ -67,4 +67,5 @@
             leLaby.innerHTML=insertion;
         }
          
-   
+   ////////////////// PAGE/////////////////////
+
