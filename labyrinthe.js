@@ -3,6 +3,12 @@
         p='p'; //représente le personnage
         b='b'; //représente le chemin
         f="f"; //représente le trophée 
+        const buttonhaut = document.querySelector('#BTN-HAUT')
+        const buttonbas = document.querySelector('#BTN-BAS')
+        const buttongauche = document.querySelector('#BTN-GAUCHE')
+        const buttondroite = document.querySelector('#BTN-DROITE')
+
+        
 
         xperso=1; //position initial du personnage sur l'axe X
         yperso=1; //postition initial du personnage sur l'axe Y
@@ -33,7 +39,7 @@
                     if (laby[i][j]==m)
                     {
                     insertion+="<td>";
-                    insertion+="<img width='52'height='52' src='PHOTO LABYRINTHE/stonewall.png'>";
+                    insertion+="<img width='52'height='52' src='PHOTO LABYRINTHE/water.jpg'>";
                     insertion+="</td>";
                     }
                     if (laby[i][j]==p)
@@ -67,5 +73,57 @@
             leLaby.innerHTML=insertion;
         }
          
+
+function BAS() {
+    yperso +=1
+    laby [yperso][xperso] = p
+    afficheLaby()
+}
+
+function HAUT() {
+    yperso -=1
+    laby [yperso][xperso] = p
+    afficheLaby()
+}
+function DROITE() {
+    xperso +=1
+    laby [yperso][xperso] = p
+    afficheLaby()
+}
+
+function GAUCHE() {
+    xperso -=1
+    laby [yperso][xperso] = p
+    afficheLaby()
+}
+
+document.body.addEventListener('keydown' , (event) =>{
+    //BAS
+    if (event.keyCode == 40){
+        BAS()
+    }
+
+    //HAUT
+    if (event.keyCode == 38){
+        HAUT()
+    }
+
+    //GAUCHE
+    if (event.keyCode == 37){
+        GAUCHE()
+    }
+
+    //DROITE
+    if (event.keyCode == 39){
+        DROITE()
+    }
+
+});
+
+
+
+
+
+
    ////////////////// PAGE/////////////////////
 
