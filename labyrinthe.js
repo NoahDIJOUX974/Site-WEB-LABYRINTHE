@@ -7,7 +7,7 @@
         const buttonbas = document.querySelector('#BTN-BAS')
         const buttongauche = document.querySelector('#BTN-GAUCHE')
         const buttondroite = document.querySelector('#BTN-DROITE')
-
+        
         
 
         xperso=1; //position initial du personnage sur l'axe X
@@ -27,7 +27,7 @@
         function afficheLaby() //ne rien modifier dans cette fonction
         {
             var leLaby=document.getElementById("laby");
-            insertion="<table border=0 cellspacing=0 cellpadding=0>";
+            insertion="<table id='myTable' border=0 cellspacing=0 cellpadding=0>";
          
          
             for(i=0;i<7;i++)
@@ -120,10 +120,61 @@ document.body.addEventListener('keydown' , (event) =>{
 
 });
 
+function BAS(){
+    if (laby[yperso +1][xperso]===m){
+    }   else{
+            laby[yperso][xperso] = b;
+            yperso++;
+            laby[yperso][xperso] = p;
+            afficheLaby()
+        }
+    }
 
 
+function GAUCHE(){
+    if (laby[yperso][xperso -1]===m){
+    }   else{
+            laby[yperso][xperso] = b;
+            xperso--;
+            laby[yperso][xperso] = p;
+            afficheLaby()
+        }
+    }
 
+function DROITE(){
+    if (laby[yperso][xperso +1]===m){
+    }   else{
+            laby[yperso][xperso] = b;
+            xperso++;
+            laby[yperso][xperso] = p;
+            afficheLaby()
+        }
+    }
 
+    
+  
+function HAUT(){
+    if (laby[yperso -1][xperso]===m){
+    }   else{
+            laby[yperso][xperso] = b;
+            yperso--;
+            laby[yperso][xperso] = p;
+            afficheLaby()
+        }
+    }
 
-   ////////////////// PAGE/////////////////////
+//TP DAY 10
+
+//Mode Souris
+    function souris() {
+        setInterval(()=>{
+            var row = document.getElementById('myTable').rows
+                row[yperso+1].cells[xperso].addEventListener('click',BAS)
+                row[yperso-1].cells[xperso].addEventListener('click',HAUT)
+                row[yperso].cells[xperso+1].addEventListener('click',DROITE)
+                row[yperso].cells[xperso-1].addEventListener('click',GAUCHE)
+        }, 100 
+    )}
+
+//MODE
 
